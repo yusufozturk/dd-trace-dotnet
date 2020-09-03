@@ -20,9 +20,6 @@
     <FrameworkReproduction Include="reproductions\StackExchange.Redis.AssemblyConflict.LegacyProject\StackExchange.Redis.AssemblyConflict.LegacyProject.csproj" />
   </ItemGroup>
 
-  <Import Condition="'$(PerformComprehensiveTesting)'=='true'" Project="PackageVersionsComprehensive.g.props" />
-  <Import Condition="'$(PerformComprehensiveTesting)'!='true'" Project="PackageVersionsLatestMinors.g.props" />
-
   <Target Name="Restore">
     <MSBuild Targets="Restore" Projects="@(CsharpProject);@(CsharpTestProject);@(CppProject);@(CppTestProject);@(SampleProject)"/>
   </Target>
