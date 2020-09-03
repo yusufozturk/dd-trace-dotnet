@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <!-- Unnecessary change -->
+  <!-- Unnecessary change. Try again -->
   <ItemGroup>
     <CsharpProject Include="src\**\*.csproj"/>
     <CsharpTestProject Include="test\**\*.csproj"/>
