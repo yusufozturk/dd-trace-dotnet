@@ -47,7 +47,7 @@ namespace Datadog.Trace.ClrProfiler
             {
                 var tracer = Tracer.Instance;
 
-#if NETSTANDARD
+#if !NETFRAMEWORK
                 if (tracer.Settings.DiagnosticSourceEnabled)
                 {
                     tracer.StartDiagnosticObservers();

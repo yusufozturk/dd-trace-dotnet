@@ -388,7 +388,7 @@ namespace Datadog.Trace
             return _agentWriter.FlushTracesAsync();
         }
 
-#if NETSTANDARD
+#if !NETFRAMEWORK
         internal void StartDiagnosticObservers()
         {
             // instead of adding a hard dependency on DiagnosticSource,
@@ -564,7 +564,7 @@ namespace Datadog.Trace
         {
             try
             {
-#if !NETSTANDARD
+#if NETFRAMEWORK
                 // System.Web.dll is only available on .NET Framework
                 if (System.Web.Hosting.HostingEnvironment.IsHosted)
                 {
