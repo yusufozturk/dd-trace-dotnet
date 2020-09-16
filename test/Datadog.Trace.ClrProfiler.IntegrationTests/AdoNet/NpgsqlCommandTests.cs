@@ -44,7 +44,7 @@ namespace Datadog.Trace.ClrProfiler.IntegrationTests.AdoNet
                 // but still be alerted if the number changes.
                 if (expectedSpanCount == 38)
                 {
-                    Assert.True(spans.Count == 38 || spans.Count == 48);
+                    Assert.True(spans.Count == 38 || spans.Count == 48, "Actual span count: " + spans.Count);
                 }
                 else
                 {
