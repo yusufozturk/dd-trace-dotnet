@@ -23,7 +23,7 @@ namespace Datadog.Trace.ClrProfiler.IntegrationTests.AdoNet
 #elif NET461
             var expectedSpanCount = 58;
 #elif NETCOREAPP3_1
-            var expectedSpanCount = 63;
+            var expectedSpanCount = 58;
 #else
             var expectedSpanCount = 38;
 #endif
