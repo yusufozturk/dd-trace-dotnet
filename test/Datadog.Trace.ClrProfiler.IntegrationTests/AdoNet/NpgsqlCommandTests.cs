@@ -22,6 +22,8 @@ namespace Datadog.Trace.ClrProfiler.IntegrationTests.AdoNet
             var expectedSpanCount = 50; // 7 queries * 7 groups + 1 internal query
 #elif NET461
             var expectedSpanCount = 58;
+#elif NETCOREAPP3_1
+            var expectedSpanCount = 63;
 #else
             var expectedSpanCount = 38;
 #endif
